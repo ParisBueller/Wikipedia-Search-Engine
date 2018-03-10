@@ -1,8 +1,8 @@
+.search-bar{
+  margin: 20px;
+  text-align: center;
+}
 
-.container{
-    text-align:center;
-    padding-top:300px;
-    padding-left:auto;
-    padding-right:auto;
-    padding-bottom:auto;
-  }
+.search-bar input{
+  width:30%;
+}

@@ -1,27 +1,21 @@
-//Global variables
-var api = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=";
-var formData;
+var api = "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=";
+var input;
 
-//if our input is empty, retrieve a random wikipedia page
-$("#search").click(function(){
-  if($("#search").val()== ""){
-    window.open("https://en.wikipedia.org/wiki/Special:Random")
+//Search Bar Component
+class SearchBar extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = { term: ''};
+}  
+  render() {
+    
+    return (
+      <div className="search-bar">
+        <input value={this.state.term} onChange={event => this.onInputChange(event.target.value)} /> 
+      </div>
+    ); 
   }
- //otherwise, search wikipedia for what was typed in our input form 
-  else{
-    function searchWikipedia(){
-      formData = document.getElementById('searchForm').value;
-      var wikiApi = api + formData;
-      console.log(wikiApi);
-      $.ajax({
-        url: wikiApi, success: function(response){
-          
-
 }
-        
 
-
-      })
-    }    
-  }
-})
+ReactDOM.render(<SearchBar />, document.getElementById('search'));
