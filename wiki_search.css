@@ -1,8 +1,9 @@
-.search-bar{
-  margin: 20px;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+  font-family: 'Roboto', 'sans-serif';
 }
-
-.search-bar input{
-  width:30%;
+.form-control{
+  width:60%;
+  margin:20px;
+  display:inline;
 }
