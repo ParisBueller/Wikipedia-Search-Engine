@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +11,13 @@
 </head>
 <body>
   <div class="container">
-    <form >      
-        <input class="form" id="searchTerm" name="wikiSearch" placeholder="Search Wikipedia. Or, click the search button for a random wiki page"> 
-        <button type="submit" class="btn btn-light" id="search"><i class="fa fa-search"></i></button> 
+    <form class="form mt-3">      
+        <input type="text" id="searchTerm" name="wikiSearch" placeholder=" Search">
+        <button type="submit" class="btn" id="search">
+          <i class="fa fa-search"></i>         
+        </button>      
     </form>
-  
+
     <div>
       <ul id="searchResults">
       </ul>
